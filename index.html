@@ -1,0 +1,40 @@
+let photo
+let clr;
+let i=0
+let j=0
+let showDots=false
+
+function preload(){
+  photo=loadImage("photo.png")
+}
+
+function setup() {
+    createCanvas(3000,3000);
+    background(240)
+    
+    angleMode(DEGREES);
+    
+    
+  }
+    
+  
+
+
+
+  function draw() {
+    if(mouseIsPressed==true){
+
+      if (i<2000&&j<2000) {
+        clr=photo.get(i,j);
+        fill(clr);
+        noStroke();
+        ellipse(i,j,10);
+        i+=10;
+        if (i>=2000) {
+          i=0;
+          j+=10;
+        }
+      }
+    }
+    }
+    
